@@ -11,9 +11,23 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */
+// const { Console } = require('jest-util');
 
-const average = () => {
+const average = (vector) => {
   // add your implementation here
+  let sum = 0;
+  if (vector.length === 0) {
+      return undefined;
+  } if (vector.length !== 0) {
+      for (let index = 0; index < vector.length; index += 1) {
+      if (typeof (vector[index]) === 'number') {
+          sum = vector[index] + sum;
+      } else {
+          return undefined;        
+      }
+      }
+      return Math.round(sum / (vector.length));
+    }
 };
 
 module.exports = average;
