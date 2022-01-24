@@ -26,9 +26,4 @@ trabalho na Trybe e mando muito em programação!
 #VQV!`;
 };
 
-// let nome = 'Fortunato';
-// let age = 29;
-
-// console.log(vqv(nome, age));
-
 module.exports = vqv;
