@@ -14,20 +14,17 @@
 // const { Console } = require('jest-util');
 
 const average = (vector) => {
-  // add your implementation here
-  let sum = 0;
+  let result;
   if (vector.length === 0) {
       return undefined;
-  } if (vector.length !== 0) {
-      for (let index = 0; index < vector.length; index += 1) {
-      if (typeof (vector[index]) === 'number') {
-          sum = vector[index] + sum;
-      } else {
-          return undefined;        
-      }
-      }
-      return Math.round(sum / (vector.length));
+  }
+  if ((vector.some((notNumber) => typeof (notNumber) === 'string')) === true) {
+    return undefined;
+  } 
+  if (vector.length !== 0) {
+      result = vector.reduce((vacumulator, vcurrent) => vacumulator + vcurrent, 0);
     }
+  return Math.round(result / vector.length);
 };
 
 module.exports = average;

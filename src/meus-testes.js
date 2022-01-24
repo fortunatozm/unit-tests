@@ -1,14 +1,6 @@
-const vqv = (name, age) => {
-    if (name === null || age === null) {
-      return undefined;
-    }
-    return `Oi, meu nome é ${name}!
-    Tenho ${age} anos,
-    trabalho na Trybe e mando muito em programação!
-    #VQV!`;
-  };
+const svetor = (vacumulator, vcurrent) => vacumulator + vcurrent;
+const average = (vetor) => Math.round(vetor.reduce(svetor) / vetor.length);
 
-const name = 'Fortunato';
-const age = 26;
+let vector = [1, 2, 3, 4];
 
-console.log(vqv(name, age));
+console.log(average(vector));
